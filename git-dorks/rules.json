@@ -1,0 +1,20 @@
+[
+   {
+      "name":"sensitive_patterns",
+      "rule_type_id":6,
+      "value":"(?i)(security|crypto|password|token|aws)",
+      "description":"Code keywords which may be sensitive"
+   },
+   {
+      "name":"non_code_file",
+      "rule_type_id":1,
+      "value":"(?i)\\.(log|cfg|ini|text|config|md|markdown|txt|yml|yaml)\\z",
+      "description":"Plaintext file types"
+   },
+   {
+      "name":"sensnitive_code_patterns",
+      "rule_type_id":7,
+      "value":"sensitive_patterns && !non_code_file",
+      "description":"Strong vuln pattern but not in a non code file"
+   }
+]
