@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    jsonlint (0.1.0)
+      oj (~> 2)
+    oj (2.15.1)
+    rake (11.1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  jsonlint
+  rake
+
+BUNDLED WITH
+   1.12.1
