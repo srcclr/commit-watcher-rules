@@ -1,0 +1,32 @@
+[
+  {
+    "name": "shell_script_file",
+    "rule_type_id": 1,
+    "value": "(?i)\\.sh",
+    "description": "Shell script file"
+  },
+  {
+    "name": "json_file",
+    "rule_type_id": 1,
+    "value": "(?i)\\.json",
+    "description": "JSON file"
+  },
+  {
+    "name": "yaml_file",
+    "rule_type_id": 1,
+    "value": "(?i)\\.yaml",
+    "description": "YAML file"
+  },
+  {
+    "name": "js_file",
+    "rule_type_id": 1,
+    "value": "(?i)\\.js",
+    "description": "JavaScript file"
+  },
+  {
+    "name": "markdown_file",
+    "rule_type_id": 1,
+    "value": "(?i)\\.(md|markdown)\\z",
+    "description": "Markdown file"
+  }
+]

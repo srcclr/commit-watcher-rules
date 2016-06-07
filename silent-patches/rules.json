@@ -16,5 +16,5 @@
       "rule_type_id":4,
       "value":"(?i)(abuse|compliant|constant.time|credential|\\bcrypto|escalate|exhaustion|forced|infinite|RFC\\d{4,5})",
       "description":"Weakly associated with security fixes"
-   },
+   }
 ]
