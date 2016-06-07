@@ -1,20 +1,134 @@
 [
-   {
-      "name":"sensitive_patterns",
-      "rule_type_id":6,
-      "value":"(?i)(security|crypto|password|token|aws)",
-      "description":"Code keywords which may be sensitive"
-   },
-   {
-      "name":"non_code_file",
-      "rule_type_id":1,
-      "value":"(?i)\\.(log|cfg|ini|text|config|md|markdown|txt|yml|yaml)\\z",
-      "description":"Plaintext file types"
-   },
-   {
-      "name":"sensnitive_code_patterns",
-      "rule_type_id":7,
-      "value":"sensitive_patterns && !non_code_file",
-      "description":"Strong vuln pattern but not in a non code file"
-   }
+  {
+    "name":"sensitive_patterns",
+    "rule_type_id":6,
+    "value":"(?i)(security|crypto|password|token|aws)",
+    "description":"Code keywords which may be sensitive"
+  },
+  {
+    "name":"non_code_file",
+    "rule_type_id":1,
+    "value":"(?i)\\.(log|cfg|ini|text|config|md|markdown|txt|yml|yaml)\\z",
+    "description":"Plaintext file types"
+  },
+  {
+    "name":"sensitive_code_patterns",
+    "rule_type_id":7,
+    "value":"sensitive_patterns && !non_code_file",
+    "description":"Strong vuln pattern but not in a non code file"
+  },
+  {
+    "name": "contains_PRIVATE",
+    "rule_type_id": 3,
+    "value": "\\bPRIVATE\\b",
+    "description": "Contains the word \"PRIVATE\""
+  },
+  {
+    "name": "contains_auth",
+    "rule_type_id": 3,
+    "value": "(?i)\\bauth\\b",
+    "description": "Contains the word \"auth\""
+  },
+  {
+    "name": "contains_dump",
+    "rule_type_id": 3,
+    "value": "\\bdump\\b",
+    "description": "Contains the word \"dump\""
+  },
+  {
+    "name": "contains_aws_access_key_id",
+    "rule_type_id": 3,
+    "value": "\\baws_access_key_id\\b",
+    "description": "Contains the word \"aws_access_key_id\""
+  },
+  {
+    "name": "contains_PT_TOKEN",
+    "rule_type_id": 3,
+    "value": "PT_TOKEN",
+    "description": "Contains the word \"PT_TOKEN\" for PivotalTracker"
+  },
+  {
+    "name": "contains_password",
+    "rule_type_id": 3,
+    "value": "password",
+    "description": "Contains the word \"password\""
+  },
+  {
+    "name": "contains_mailchimp",
+    "rule_type_id": 3,
+    "value": "mailchimp",
+    "description": "Contains the word \"mailchimp\""
+  },
+  {
+    "name": "contains_aws",
+    "rule_type_id": 3,
+    "value": "\\baws\\b",
+    "description": "Contains the word \"aws\""
+  },
+  {
+    "name": "contains_rds_info",
+    "rule_type_id": 3,
+    "value": "rds\\.amazonaws\\.com",
+    "description": "Contains the word \"rds.amazonaws.com\""
+  },
+  {
+    "name": "contains_forecast_api",
+    "rule_type_id": 3,
+    "value": "api\\.forecast\\.io",
+    "description": "Contains the word \"api.forecast.io\""
+  },
+  {
+    "name": "contains_jsforce",
+    "rule_type_id": 3,
+    "value": "jsforce",
+    "description": "Contains the word \"jsforce\" for SalesForce"
+  },
+  {
+    "name": "contains_conn_login",
+    "rule_type_id": 3,
+    "value": "conn\\.login",
+    "description": "Contains the word \"conn.login\""
+  },
+  {
+    "name": "contains_sf_username",
+    "rule_type_id": 3,
+    "value": "SF_USERNAME \"salesforce\"",
+    "description": "Contains the SF_USERNAME for SalesForce"
+  },
+  {
+    "name": "contains_API_KEY",
+    "rule_type_id": 3,
+    "value": "API_KEY",
+    "description": "Contains the word \"API_KEY\""
+  },
+  {
+    "name": "contains_auths",
+    "rule_type_id": 3,
+    "value": "auths",
+    "description": "Contains the word \"auths\""
+  },
+  {
+    "name": "contains_irc_pass",
+    "rule_type_id": 3,
+    "value": "irc_pass",
+    "description": "Contains the word \"irc_pass\""
+  },
+  {
+    "name": "winframe_client_config",
+    "rule_type_id": 3,
+    "value": "\\[WFClient\\] Password= extension:ica",
+    "description": "Contains WinFrame-Client configuration for connecting to Citrix App Servers"
+  },
+  {
+    "name": "contains_rcon",
+    "rule_type_id": 3,
+    "value": "\\brcon\\b",
+    "description": "Contains the word \"rcon\""
+  },
+  {
+    "name": "contains_JEKYLL_GITHUB_TOKEN",
+    "rule_type_id": 3,
+    "value": "JEKYLL_GITHUB_TOKEN",
+    "description": "Contains the word \"JEKYLL_GITHUB_TOKEN\""
+  }
 ]
